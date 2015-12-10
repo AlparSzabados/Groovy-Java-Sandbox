@@ -1,0 +1,2 @@
+package szabados.alpar.rockPaperSciccors
+
