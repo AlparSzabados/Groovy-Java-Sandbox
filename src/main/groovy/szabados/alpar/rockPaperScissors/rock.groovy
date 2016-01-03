@@ -1,4 +1,5 @@
 package szabados.alpar.rockPaperScissors
+//TODO put it in a Class
 
 import static GamePossibilities.*
 
