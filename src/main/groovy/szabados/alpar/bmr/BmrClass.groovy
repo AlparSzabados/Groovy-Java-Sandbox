@@ -1,7 +1,7 @@
-package szabados.alpar
+package szabados.alpar.bmr
 
-import static szabados.alpar.BmrClass.Activity.*
-import static szabados.alpar.BmrClass.Gender.*
+import static szabados.alpar.bmr.BmrClass.Activity.*
+import static szabados.alpar.bmr.BmrClass.Gender.*
 
 class BmrClass {
     enum Gender {
