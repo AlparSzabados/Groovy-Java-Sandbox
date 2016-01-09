@@ -4,8 +4,10 @@ import static szabados.alpar.rockPaperScissors.RockGameClass.gameWinner
 import static szabados.alpar.rockPaperScissors.RockGameClass.GamePossibilities.*
 import static szabados.alpar.rockPaperScissors.RockGameClass.GameResults.*
 
-println "Rock, Paper or Scissors?" // Prompts the player to input choice to begin game.
+// Prompts the player to input choice to begin game.
+println "Rock, Paper or Scissors?"
 
+// Tha player choice is read from the console.
 def playerChoice = playerInput()
 def playerInput() {
     RockGameClass.GamePossibilities playerChoice = System.in.newReader().readLine().toUpperCase()
@@ -13,7 +15,7 @@ def playerInput() {
     playerChoice
 }
 
-// Randomly generates a choice for the computer.
+// The computers choice is generated randomly.
 def computerChoice = computerInput()
 def computerInput() {
     def list = [ROCK, PAPER, SCISSORS]
@@ -24,6 +26,7 @@ def computerInput() {
     computerChoice
 }
 
+// Determining the winner.
 def winner = gameWinner(computerChoice, playerChoice)
 switch (winner) {
     case COMPUTER_WINS: println "The computer won this time!"
