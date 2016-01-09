@@ -9,7 +9,7 @@ import static szabados.alpar.rockPaperScissors.RockGameClass.GameResults.*
  */
 class RockGameClassTest extends Specification {
 /*@formatter:off*/
-    def 'Rock Paper Scissors Test'() {
+    def 'Rock, Paper, Scissors Game'() {
         when:   def rPS = RockGameClass.gameWinner(computerChoice, playerChoice)
         then:   rPS == winner
 
