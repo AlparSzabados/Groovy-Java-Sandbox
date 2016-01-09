@@ -2,9 +2,9 @@ package szabados.alpar.bmr
 
 import spock.lang.Specification
 
-import static szabados.alpar.BmrClass.*
-import static szabados.alpar.BmrClass.Activity.*
-import static szabados.alpar.BmrClass.Gender.*
+import static szabados.alpar.bmr.BmrClass.*
+import static szabados.alpar.bmr.BmrClass.Activity.*
+import static szabados.alpar.bmr.BmrClass.Gender.*
 import static szabados.alpar.bmr.HelperClass.almostEqual
 
 /**
