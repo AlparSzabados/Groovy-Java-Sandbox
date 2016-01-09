@@ -7,16 +7,18 @@ import static szabados.alpar.rockPaperScissors.RockGameClass.GameResults.*
 // Prompts the player to input choice to begin game.
 println "Rock, Paper or Scissors?"
 
-// Tha player choice is read from the console.
-def playerChoice = playerInput()
+RockGameClass.GamePossibilities playerChoice = playerInput()
+
+// The player choice is read from the console.
 def playerInput() {
-    RockGameClass.GamePossibilities playerChoice = System.in.newReader().readLine().toUpperCase()
+    playerChoice = System.in.newReader().readLine().toUpperCase()
     println "Your choose: ${playerChoice}"
     playerChoice
 }
 
+RockGameClass.GamePossibilities computerChoice = computerInput()
+
 // The computers choice is generated randomly.
-def computerChoice = computerInput()
 def computerInput() {
     def list = [ROCK, PAPER, SCISSORS]
     def random = new Random()
