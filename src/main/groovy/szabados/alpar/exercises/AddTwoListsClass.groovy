@@ -6,15 +6,17 @@ class AddTwoLists {
         def listOneReverse = num1.toString().toList().reverse()*.toInteger()
         def listTwoReverse = num2.toString().toList().reverse()*.toInteger()
 
-        def bigNum = (listOneReverse.size() > listTwoReverse.size()) ? listOneReverse : listTwoReverse
-        def smallNum = (listOneReverse.size() < listTwoReverse.size()) ? listOneReverse : listTwoReverse
-        if (listOneReverse.size() == listTwoReverse.size()) {
+        def num1Size = listOneReverse.size()
+        def num2Size = listTwoReverse.size()
+
+        def bigNum = (num1Size > num2Size) ? listOneReverse : listTwoReverse
+        def smallNum = (num1Size < num2Size) ? listOneReverse : listTwoReverse
+        if (num1Size == num2Size) {
             bigNum = listOneReverse
             smallNum = listTwoReverse
         }
 
         def resultNumber = []
-
         int carry = 0
         for (i in 0..bigNum.size() - 1) {
             def sum = sum(smallNum, i, bigNum)
