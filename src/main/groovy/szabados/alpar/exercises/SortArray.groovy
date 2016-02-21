@@ -1,18 +1,14 @@
 package szabados.alpar.exercises
 
-/* Sort a random array of numbers */
+/* Sort a random array of values */
 
-def numbers = [1, 2, 3, 9, 1000, 0, 99, 8, 7, 7, 1, 0, 0]
+def values = [1, 2, 3, 9, 1000, 0, 99, 8, 7, 7, 1, 0, 0]
 
-for (number in numbers.indices) {
-    for (index in numbers.indices) {
-        def compare = numbers[number].compareTo(numbers[index])
-        if (compare == -1) {
-            def numberReplace = numbers[index]
-            numbers[index] = numbers[number]
-            numbers[number] = numberReplace
+for (i in values.indices)
+    for (j in values.indices) {
+        if (values[i] < values[j]) {
+            values.swap(i, j)
         }
     }
-}
 
-println numbers
+assert values == [0, 0, 0, 1, 1, 2, 3, 7, 7, 8, 9, 99, 1000]
