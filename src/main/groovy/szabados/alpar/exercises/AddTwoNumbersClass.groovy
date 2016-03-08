@@ -16,7 +16,7 @@ class AddTwoNumbers {
         }
 
         def resultNumber = []
-        int carry = 0
+        def carry = 0
         for (i in 0..<bigNum.size()) {
             def sum = sum(smallNum, bigNum, i)
             def result = (sum + carry) % 10
@@ -26,7 +26,7 @@ class AddTwoNumbers {
         if (carry > 0)
             resultNumber += carry
 
-        resultNumber.reverse().join('')
+        resultNumber.reverse().join()
     }
     static sum(List<Integer> smallNum, List<Integer> bigNum, int i) {
         (smallNum[i] != null) ? bigNum[i] + smallNum[i] : bigNum[i]
