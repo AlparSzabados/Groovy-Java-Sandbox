@@ -4,7 +4,7 @@ import spock.lang.Specification
 
 class NumToStringTest extends Specification {
     /*@formatter:off*/
-    def 'bmr calculator'() {
+    def 'Transforming Numbers To String'() {
         when:   def result = NumToString.main(numbers)
         then:   result == expectedResult
 
@@ -29,16 +29,16 @@ class NumToStringTest extends Specification {
                 18      ||    "eighteen"
                 19      ||    "nineteen"
                 20      ||    "twenty"
+                21      ||    "twenty one"
+                22      ||    "twenty two"
                 30      ||    "thirty"
                 40      ||    "forty"
                 50      ||    "fifty"
+                55      ||    "fifty five"
                 60      ||    "sixty"
                 70      ||    "seventy"
                 80      ||    "eighty"
                 90      ||    "ninety"
-                21      ||    "twenty one"
-                22      ||    "twenty two"
-                55      ||    "fifty five"
                 99      ||    "ninety nine"
     }
     /*@formatter:on*/
