@@ -1,5 +1,7 @@
 package szabados.alpar.exercises;
 
+/* Write a program which takes input as a number and converts it into string format. */
+
 public class NumToString {
 
     public static String onesString[] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
