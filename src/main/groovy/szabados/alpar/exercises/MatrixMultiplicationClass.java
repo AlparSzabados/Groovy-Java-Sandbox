@@ -2,6 +2,8 @@ package szabados.alpar.exercises;
 
 import java.util.*;
 
+/* Write a program to takes two matrix(3*3) array as inputs and calculate the multiplication of both matrix. */
+
 class MatrixMultiplicationJavaClass {
 
     public static void main(String[] args) {
