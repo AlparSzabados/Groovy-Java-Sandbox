@@ -2,32 +2,32 @@ package szabados.alpar.exercises;
 
 public class NumToString {
 
-    public static String ones[] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
-    public static String tens[] = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
-    public static String main(int num) {
+    public static String onesString[] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+    public static String tensString[] = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 
-        int rem, t;
+    public static String main(int num) {
+        int remainder, tens;
 
         String value = "";
 
-        if (num < 20) {
-            for (int i = 0; i <= ones.length; i++) {
+        if (num < onesString.length + 1) {
+            for (int i = 0; i <= onesString.length; i++) {
                 if (num == i) {
-                    value += ones[i - 1];
+                    value += onesString[i - 1];
                 }
             }
         } else {
-            rem = num % 10;
-            t = (num - rem) / 10;
-            for (int i = 0; i <= tens.length + 1; i++) {
-                if (t == i) {
-                    value += tens[i - 2];
+            remainder = num % 10;
+            tens = (num - remainder) / 10;
+            for (int i = 0; i <= tensString.length + 1; i++) {
+                if (tens == i) {
+                    value += tensString[i - 2];
                 }
             }
-            for (int i = 0; i <= ones.length; i++) {
-                if (rem != 0) {
-                    if (rem == i) {
-                        value += " " + ones[i - 1];
+            for (int i = 0; i <= onesString.length; i++) {
+                if (remainder != 0) {
+                    if (remainder == i) {
+                        value += " " + onesString[i - 1];
                     }
                 }
             }
