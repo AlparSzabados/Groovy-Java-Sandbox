@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/IdeaProjects/Groovy-Java-Sandbox/groovy-gradle.iml" filepath="$USER_HOME$/IdeaProjects/Groovy-Java-Sandbox/groovy-gradle.iml" />
-      <module fileurl="file://$USER_HOME$/IdeaProjects/Groovy-Java-Sandbox/groovy-gradle-1.iml" filepath="$USER_HOME$/IdeaProjects/Groovy-Java-Sandbox/groovy-gradle-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Groovy-Java-Sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/Groovy-Java-Sandbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Groovy-Java-Sandbox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Groovy-Java-Sandbox_main.iml" group="Groovy-Java-Sandbox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Groovy-Java-Sandbox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Groovy-Java-Sandbox_test.iml" group="Groovy-Java-Sandbox" />
     </modules>
   </component>
 </project>
