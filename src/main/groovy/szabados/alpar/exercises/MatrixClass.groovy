@@ -2,6 +2,8 @@ package szabados.alpar.exercises
 
 /** Zero out the row an column of each 0 element in a matrix */
 
+//TODO Take care of the warnings
+
 class Matrix {
     static zeroOutMatrix(matrix) {
         def matrixColumn = []

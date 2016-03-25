@@ -2,6 +2,8 @@ package szabados.alpar.exercises
 
 /* Sort an array of values */
 
+//TODO white a Test for it
+
 def values = [1, 2, 3, 9, 1000, 0, 99, 8, 7, 7, 1, 0, 0]
 
 int valueSize = values.size()

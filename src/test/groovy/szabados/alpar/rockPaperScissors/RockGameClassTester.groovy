@@ -11,7 +11,7 @@ RockGameClass.GamePossibilities playerChoice = playerInput()
 
 // The player choice is read from the console.
 def playerInput() {
-    playerChoice = System.in.newReader().readLine().toUpperCase()
+    def playerChoice = System.in.newReader().readLine().toUpperCase()
     println "Your choose: ${playerChoice}"
     playerChoice
 }
