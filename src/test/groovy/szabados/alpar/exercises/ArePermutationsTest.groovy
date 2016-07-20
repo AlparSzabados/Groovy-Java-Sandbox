@@ -8,7 +8,7 @@ import static szabados.alpar.exercises.ArePermutations.*
  * Test to see if one string is permutation of another
  */
 
-class ArePermutationsClassTest extends Specification {
+class ArePermutationsTest extends Specification {
     /*@formatter:off*/
     def 'Permutations check'() {
         when:   def permutations = permutationCheck(strinOne, stringTwo)

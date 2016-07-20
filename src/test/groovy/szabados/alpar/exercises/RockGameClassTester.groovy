@@ -1,13 +1,15 @@
-package szabados.alpar.rockPaperScissors
+package szabados.alpar.exercises
 
-import static szabados.alpar.rockPaperScissors.RockGameClass.gameWinner
-import static szabados.alpar.rockPaperScissors.RockGameClass.GamePossibilities.*
-import static szabados.alpar.rockPaperScissors.RockGameClass.GameResults.*
+import szabados.alpar.exercises.RpsGame
+
+import static szabados.alpar.exercises.RpsGame.gameWinner
+import static szabados.alpar.exercises.RpsGame.GamePossibilities.*
+import static szabados.alpar.exercises.RpsGame.GameResults.*
 
 // Prompts the player to input choice to begin game.
 println "Rock, Paper or Scissors?"
 
-RockGameClass.GamePossibilities playerChoice = playerInput()
+RpsGame.GamePossibilities playerChoice = playerInput()
 
 // The player choice is read from the console.
 def playerInput() {
@@ -16,7 +18,7 @@ def playerInput() {
     playerChoice
 }
 
-RockGameClass.GamePossibilities computerChoice = computerInput()
+RpsGame.GamePossibilities computerChoice = computerInput()
 
 // The computers choice is generated randomly.
 def computerInput() {

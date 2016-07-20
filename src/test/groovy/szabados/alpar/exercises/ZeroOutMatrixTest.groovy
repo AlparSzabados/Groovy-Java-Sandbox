@@ -2,10 +2,10 @@ package szabados.alpar.exercises
 
 import spock.lang.Specification
 
-class MatrixClassTest extends Specification {
+class ZeroOutMatrixTest extends Specification {
     /*@formatter:off*/
     def 'Zero out rows and columns in a matrix'() {
-        when:   def zeroedMatrix = Matrix.zeroOutMatrix(matrix)
+        when:   def zeroedMatrix = ZeroOutMatrix.zeroOutMatrix(matrix)
         then:   zeroedMatrix == result
 
         where:  matrix                                           || result

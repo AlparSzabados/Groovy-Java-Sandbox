@@ -1,9 +1,9 @@
-package szabados.alpar.bmr
+package szabados.alpar.exercises
 
-import static szabados.alpar.bmr.BmrClass.Activity.*
-import static szabados.alpar.bmr.BmrClass.Gender.*
+import static Bmr.Activity.*
+import static Bmr.Gender.*
 
-class BmrClass {
+class Bmr {
     enum Gender {
         MALE, FEMALE
     }

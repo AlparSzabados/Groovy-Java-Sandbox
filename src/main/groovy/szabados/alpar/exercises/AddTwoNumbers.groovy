@@ -4,8 +4,8 @@ package szabados.alpar.exercises
 
 class AddTwoNumbers {
     static addTwoNumbers(Number num1, Number num2) {
-        def list1Reverse = num1.toString().toList().reverse()*.toInteger()
-        def list2Reverse = num2.toString().toList().reverse()*.toInteger()
+        def list1Reverse = num1.toString().toList().reverse().toString().toInteger()
+        def list2Reverse = num2.toString().toList().reverse()*.toString().toInteger()
 
         def bigNum = list1Reverse
         def smallNum = list2Reverse

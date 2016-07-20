@@ -1,4 +1,4 @@
-package szabados.alpar.numberConversion
+package szabados.alpar.exercises
 
 class NumberConversion {
 
@@ -7,7 +7,7 @@ class NumberConversion {
      * @param binNumber binary number to be converted
      * @return as decimal number
      */
-    static binaryConversion(int binNumber) {
+    static int binaryConversion(int binNumber) {
         def result = 0
         def offset = 0
         while (binNumber > 0) {
@@ -23,7 +23,7 @@ class NumberConversion {
      * @param decNumber decimal number to be converted
      * @return as binary number
      */
-    static decimalConversion(int decNumber) {
+    static int decimalConversion(int decNumber) {
         def result = 0
         def offset = 1
         while (decNumber > 0) {

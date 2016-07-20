@@ -1,12 +1,12 @@
-package szabados.alpar.numberConversion
+package szabados.alpar.exercises
 
 import spock.lang.Specification
-import static szabados.alpar.numberConversion.NumberConversion.*
+import static szabados.alpar.exercises.NumberConversion.*
 
 /**
  * Test for binary number conversion to decimal and decimal to binary
  */
-class NumberConversionClassTest extends Specification {
+class NumberConversionTest extends Specification {
     /*@formatter:off*/
     def 'Binary Number Conversion'() {
         when:   def decimalNumber = binaryConversion(binNumber)

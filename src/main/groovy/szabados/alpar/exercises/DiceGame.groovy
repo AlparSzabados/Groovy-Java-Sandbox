@@ -1,4 +1,4 @@
-package szabados.alpar.diceGame
+package szabados.alpar.exercises
 //TODO put it in a Class
 
 def numberOfGames = 10

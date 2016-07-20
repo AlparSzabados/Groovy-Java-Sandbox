@@ -1,9 +1,8 @@
-package szabados.alpar.rockPaperScissors
+package szabados.alpar.exercises
 
-import static szabados.alpar.rockPaperScissors.RockGameClass.GamePossibilities.*
-import static szabados.alpar.rockPaperScissors.RockGameClass.GameResults.*
+import static RpsGame.GameResults.*
 
-class RockGameClass {
+class RpsGame {
     enum GamePossibilities {
         ROCK, PAPER, SCISSORS
     }

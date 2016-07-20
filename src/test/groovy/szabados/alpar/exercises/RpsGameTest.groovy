@@ -1,16 +1,18 @@
-package szabados.alpar.rockPaperScissors
+package szabados.alpar.exercises
 
 import spock.lang.Specification
-import static szabados.alpar.rockPaperScissors.RockGameClass.GamePossibilities.*
-import static szabados.alpar.rockPaperScissors.RockGameClass.GameResults.*
+import szabados.alpar.exercises.RpsGame
+
+import static szabados.alpar.exercises.RpsGame.GamePossibilities.*
+import static szabados.alpar.exercises.RpsGame.GameResults.*
 
 /**
  *  Test for the Rock, Paper, Scissors Game.
  */
-class RockGameClassTest extends Specification {
+class RpsGameTest extends Specification {
 /*@formatter:off*/
     def 'Rock, Paper, Scissors Game'() {
-        when:   def gameResults = RockGameClass.gameWinner(computerChoice, playerChoice)
+        when:   def gameResults = RpsGame.gameWinner(computerChoice, playerChoice)
         then:   gameResults == winner
 
         where:  computerChoice | playerChoice || winner

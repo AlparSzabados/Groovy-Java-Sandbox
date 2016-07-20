@@ -1,16 +1,19 @@
-package szabados.alpar.bmr
+package szabados.alpar.exercises
 
 import spock.lang.Specification
 
-import static szabados.alpar.bmr.BmrClass.*
-import static szabados.alpar.bmr.BmrClass.Activity.*
-import static szabados.alpar.bmr.BmrClass.Gender.*
-import static szabados.alpar.bmr.HelperClass.almostEqual
+import static szabados.alpar.exercises.Bmr.Activity.LIGHT
+import static szabados.alpar.exercises.Bmr.Activity.NONE
+import static szabados.alpar.exercises.Bmr.Gender.FEMALE
+import static szabados.alpar.exercises.Bmr.Gender.MALE
+import static szabados.alpar.exercises.Bmr.basalMetabolicRate
+import static szabados.alpar.exercises.Bmr.dailyCalorieIntake
+import static HelperClass.almostEqual
 
 /**
  * Simple test for the BMR Calculator
  */
-class BmrClassTest extends Specification {
+class BmrTest extends Specification {
     /*@formatter:off*/
     def 'bmr calculator'() {
         when:   def bmi = basalMetabolicRate(gender, weight, height, age)
