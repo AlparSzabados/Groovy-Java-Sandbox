@@ -8,7 +8,7 @@ import static szabados.alpar.exercises.NumberConversion.*
  */
 class NumberConversionTest extends Specification {
     /*@formatter:off*/
-    def 'Binary Number Conversion'() {
+    def 'convert binary to decimal'() {
         when:   def decimalNumber = binaryConversion(binNumber)
         then:   decimalNumber == result
 
@@ -36,7 +36,7 @@ class NumberConversionTest extends Specification {
                 1111111111   || 1023
     }
 
-    def 'Decimal Number Conversion'() {
+    def 'convert decimal to binary'() {
         when:   def binaryNumber = decimalConversion(decNumber)
         then:   binaryNumber == result2
 

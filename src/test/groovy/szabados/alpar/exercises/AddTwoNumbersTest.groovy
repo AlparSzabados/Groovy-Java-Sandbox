@@ -6,7 +6,7 @@ import static AddTwoNumbers.addTwoNumbers
 
 class AddTwoNumbersTest extends Specification {
     /*@formatter:off*/
-    def 'Add two list of numbers'() {
+    def 'sum of two numbers'() {
         when:   def numberList = addTwoNumbers(num1, num2)
         then:   numberList == result.toString()
 

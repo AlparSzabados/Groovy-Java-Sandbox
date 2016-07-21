@@ -5,7 +5,7 @@ import spock.lang.Specification
 import static MatrixMultiplicationClass.*
 
 class MatrixMultiplicationTest extends Specification {
-    def "MultiplyMatrix"() {
+    def "should multiply a 3x3 matrix"() {
         /* formatter: off */
         when:   def result = MultiplyMatrix(matrixOne, matrixTwo)
         then:   result == expectedResult

@@ -10,7 +10,7 @@ import static szabados.alpar.exercises.ArePermutations.*
 
 class ArePermutationsTest extends Specification {
     /*@formatter:off*/
-    def 'Permutations check'() {
+    def 'permutations?'() {
         when:   def permutations = permutationCheck(strinOne, stringTwo)
         then:   permutations == result
 

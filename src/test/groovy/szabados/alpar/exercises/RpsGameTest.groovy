@@ -11,7 +11,7 @@ import static szabados.alpar.exercises.RpsGame.GameResults.*
  */
 class RpsGameTest extends Specification {
 /*@formatter:off*/
-    def 'Rock, Paper, Scissors Game'() {
+    def 'Rps game check winner'() {
         when:   def gameResults = RpsGame.gameWinner(computerChoice, playerChoice)
         then:   gameResults == winner
 

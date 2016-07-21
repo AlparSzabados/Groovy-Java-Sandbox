@@ -2,13 +2,13 @@ package szabados.alpar.exercises
 
 import spock.lang.Specification
 
+import static HelperClass.almostEqual
 import static szabados.alpar.exercises.Bmr.Activity.LIGHT
 import static szabados.alpar.exercises.Bmr.Activity.NONE
 import static szabados.alpar.exercises.Bmr.Gender.FEMALE
 import static szabados.alpar.exercises.Bmr.Gender.MALE
 import static szabados.alpar.exercises.Bmr.basalMetabolicRate
 import static szabados.alpar.exercises.Bmr.dailyCalorieIntake
-import static HelperClass.almostEqual
 
 /**
  * Simple test for the BMR Calculator
