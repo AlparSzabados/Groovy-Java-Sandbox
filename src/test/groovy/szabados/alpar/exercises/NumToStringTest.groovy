@@ -5,7 +5,7 @@ import spock.lang.Specification
 class NumToStringTest extends Specification {
     /*@formatter:off*/
     def 'transform integers into corresponding strings'() {
-        when:   def result = NumToString.numToString(numbers)
+        when:   def result = NumToString.main(numbers)
         then:   result == expectedResult
 
         where:  numbers ||  expectedResult
