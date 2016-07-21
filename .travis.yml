@@ -1,11 +1,6 @@
 language: groovy
-jdk:
-  - oraclejdk8
 
-sudo: required
+jdk: oraclejdk8
 
-before_install:
- - chmod +x gradlew
-
-script:
-  - ./gradlew clean build -i --continue
+before_install: chmod +x gradlew
+script: ./gradlew clean build --stacktrace
