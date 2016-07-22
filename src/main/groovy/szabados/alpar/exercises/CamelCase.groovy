@@ -4,10 +4,10 @@ class CamelCase {
     static List<String> matching(String pattern, ArrayList<String> classNames) {
         def result = []
 
-        def regEx = "(?=\\p{Lu})"
-        def patternSplit = pattern.split("${regEx}")
+        def upperCaseSplitter = "(?=\\p{Lu})"
+        def patternSplit = pattern.split(upperCaseSplitter)
         for (int i in 0..<classNames.size()) {
-            def classNameSplit = classNames[i].split("${regEx}")
+            def classNameSplit = classNames[i].split(upperCaseSplitter)
             def patternSize = patternSplit.size()
 
             if (classNameSplit.size() >= patternSize) {
