@@ -25,6 +25,7 @@ dependencies {
     )
 
     testCompile([group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'],
-                [group: 'com.nagternal', name: 'spock-genesis', version: '0.3.0']
+                [group: 'com.nagternal', name: 'spock-genesis', version: '0.3.0'],
+                ['junit:junit:4.12']
     )
 }
