@@ -12,4 +12,19 @@ class Utils {
         }
         result
     }
+
+    static final List<Long> primeFactorsOf(long num){
+        List<Long> primes = []
+        long primeN = 2
+        while (primeN < num) {
+            if (num % primeN == 0L ) {
+                num /= primeN
+                primes += primeN
+            } else {
+                primeN++
+            }
+        }
+        primes += primeN
+        primes
+    }
 }
