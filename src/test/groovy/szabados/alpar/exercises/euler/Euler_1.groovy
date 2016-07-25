@@ -15,6 +15,7 @@ class Euler_1 {
      * See also <a href="https://projecteuler.net/problem=1">projecteuler.net problem 1</a>.
      */
     @Test
+
     public void shouldSolveProblem1() {
         assert sumOf3and5bellow(10) == (23)
         assert sumOf3and5bellow(1000) == (233168)
