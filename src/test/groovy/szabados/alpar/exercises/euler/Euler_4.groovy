@@ -23,17 +23,17 @@ class Euler_4 {
     }
 
     static final int largestPalindromeOfProductsFromFactorsInRange(int min, int max){
-        int palindrome = 0
-        for (i in max..min) {
-            for (j in max..min) {
-                def result = i * j
-                if (result <= palindrome) break
-                if (result == numberInReverse(result)) {
-                    palindrome = result
+        int maxPalindrome = 0
+        for (int i in max..min) {
+            for (int j in max..min) {
+                def sum = i * j
+                if (sum <= maxPalindrome) break
+                if (sum == numberInReverse(sum)) {
+                    maxPalindrome = sum
                     break
                 }
             }
         }
-        palindrome
+        maxPalindrome
     }
 }
