@@ -4,30 +4,30 @@ class Utils {
     static final List<Integer> fibonacci(int limit = 0) {
         int n1 = 0
         int n2 = 1
-        List<Integer> isEven = [n1, n2]
+        List<Integer> fibNumbersList = [n1, n2]
 
         int fibNum = 0
         while ((fibNum + n1) < limit) {
             fibNum = n1 + n2
             n1 = n2
             n2 = fibNum
-            isEven += fibNum
+            fibNumbersList += fibNum
         }
-        isEven
+        fibNumbersList
     }
 
     static final List<Long> primeFactorsOf(long num){
         List<Long> primes = []
-        long primeN = 2
-        while (primeN < num) {
-            if (num % primeN == 0L ) {
-                num /= primeN
-                primes += primeN
+        long primeNum = 2
+        while (primeNum < num) {
+            if (num % primeNum == 0L ) {
+                num /= primeNum
+                primes += primeNum
             } else {
-                primeN++
+                primeNum++
             }
         }
-        primes += primeN
+        primes += primeNum
         primes
     }
 
