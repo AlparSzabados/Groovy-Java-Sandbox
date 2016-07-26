@@ -2,6 +2,8 @@ package szabados.alpar.exercises.euler
 
 import org.junit.Test
 
+import static szabados.alpar.exercises.euler.Utils.*
+
 class Euler_4 {
 
     /**
@@ -26,7 +28,7 @@ class Euler_4 {
             for (j in max..min) {
                 def result = i * j
                 if (result <= palindrome) break
-                if (result.toString() == result.toString().reverse()) {
+                if (result == numberInReverse(result)) {
                     palindrome = result
                     break
                 }

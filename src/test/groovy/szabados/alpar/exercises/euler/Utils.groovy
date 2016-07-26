@@ -30,4 +30,13 @@ class Utils {
         primes += primeN
         primes
     }
+
+    static int numberInReverse(int num) {
+        def numReverse = 0
+        while(num > 0){
+            numReverse = (numReverse * 10) + (num % 10)
+            num /= 10
+        }
+        numReverse
+    }
 }
