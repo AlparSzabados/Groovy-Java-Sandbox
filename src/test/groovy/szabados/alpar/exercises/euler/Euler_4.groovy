@@ -17,7 +17,7 @@ class Euler_4 {
      * See also <a href="https://projecteuler.net/problem=4">projecteuler.net problem 4</a>.
      */
     @Test
-    public void shouldSolveProblem3() {
+    public void shouldSolveProblem4() {
         assert (largestPalindromeOfProductsFromFactorsInRange(10, 99)) == 9009
         assert (largestPalindromeOfProductsFromFactorsInRange(100, 999)) == 906609
     }
