@@ -1,35 +1,39 @@
 package szabados.alpar.exercises
 
 class NumberConversion {
+    /* Converts the string representation of a binary number into an int in decimal and vice versa. */
 
-    /**
-     * Converts binary numbers into decimal numbers
-     * @param binNumber binary number to be converted
-     * @return as decimal number
-     */
-    static int binaryConversion(int binNumber) {
+    static Object convertedNumber(Object num) {
+        def binNumber
+        def decNumber
+
+        if (num.toString().startsWith('0b')) {
+            decNumber = num.toString()[2..-1].toInteger()
+            return convertToBinary(decNumber)
+        } else {
+            binNumber = num.toString().toInteger()
+            return "0b${convertToDecima(binNumber)}"
+        }
+    }
+
+    static int convertToBinary(int num) {
         def result = 0
         def offset = 0
-        while (binNumber > 0) {
-            result += (binNumber % 10) * 2**offset
+        while (num > 0) {
+            result += (num % 10) * 2**offset
             offset += 1
-            binNumber /= 10
+            num /= 10
         }
         result
     }
 
-    /**
-     * Converts decimal numbers into binary numbers
-     * @param decNumber decimal number to be converted
-     * @return as binary number
-     */
-    static int decimalConversion(int decNumber) {
+    static int convertToDecima(int num) {
         def result = 0
         def offset = 1
-        while (decNumber > 0) {
-            result += (decNumber % 2) * offset
+        while (num > 0) {
+            result += (num % 2) * offset
             offset *= 10
-            decNumber /= 2
+            num /= 2
         }
         result
     }
