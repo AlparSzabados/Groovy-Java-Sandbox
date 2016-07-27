@@ -16,24 +16,22 @@ class Utils {
         fibNumbersList
     }
 
-    static final List<Long> primeFactorsOf(long num){
+    static final List<Long> primeFactorsOf(long num) {
         List<Long> primes = []
         long primeNum = 2
-        while (primeNum < num) {
-            if (num % primeNum == 0L ) {
+        while (primeNum <= num) {
+            if (num % primeNum == 0L) {
                 num /= primeNum
                 primes += primeNum
-            } else {
+            } else
                 primeNum++
-            }
         }
-        primes += primeNum
         primes
     }
 
     static int numberInReverse(int num) {
         def numReverse = 0
-        while(num > 0){
+        while (num > 0) {
             numReverse = (numReverse * 10) + (num % 10)
             num /= 10
         }
