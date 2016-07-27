@@ -19,7 +19,7 @@ class Euler_2 {
      * See also <a href="https://projecteuler.net/problem=2">projecteuler.net problem 2</a>.
      */
     @Test
-    public void shouldSolveProblem2(){
+    public void shouldSolveProblem2() {
         assert (sumOfEvenFibonacciValuesNotExceeding(90)) == 44
         assert (sumOfEvenFibonacciValuesNotExceeding(4_000_000)) == 4_613_732
     }

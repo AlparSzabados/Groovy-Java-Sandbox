@@ -2,7 +2,7 @@ package szabados.alpar.exercises.euler
 
 import org.junit.Test
 
-import static szabados.alpar.exercises.euler.Utils.*
+import static szabados.alpar.exercises.euler.Utils.numberInReverse
 
 class Euler_4 {
 
@@ -22,7 +22,7 @@ class Euler_4 {
         assert (largestPalindromeOfProductsFromFactorsInRange(100, 999)) == 906609
     }
 
-    static final int largestPalindromeOfProductsFromFactorsInRange(int min, int max){
+    static final int largestPalindromeOfProductsFromFactorsInRange(int min, int max) {
         int maxPalindrome = 0
         for (int i in max..min) {
             for (int j in max..min) {

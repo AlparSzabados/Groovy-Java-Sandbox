@@ -22,7 +22,7 @@ class Euler_1 {
     }
 
     private static int sumOf3and5bellow(int limit) {
-        return (1..<limit).findAll { filter it }.sum() as Integer
+        return (1..<limit).findAll { filter it }.sum() as int
     }
 
     private static boolean filter(int num) {

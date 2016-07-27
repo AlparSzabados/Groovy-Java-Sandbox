@@ -2,7 +2,7 @@ package szabados.alpar.exercises.euler
 
 import org.junit.Test
 
-import static szabados.alpar.exercises.euler.Utils.*
+import static szabados.alpar.exercises.euler.Utils.primeFactorsOf
 
 class Euler_3 {
 
@@ -16,13 +16,13 @@ class Euler_3 {
      * See also <a href="https://projecteuler.net/problem=3">projecteuler.net problem 3</a>.
      */
     @Test
-    public void shouldSolveProblem3(){
+    public void shouldSolveProblem3() {
         assert (biggestPrimeFactorOf(23)) == 23
         assert (biggestPrimeFactorOf(24)) == 3
         assert (biggestPrimeFactorOf(600_851_475_143)) == 6857
     }
 
-    private static long biggestPrimeFactorOf(long num){
+    private static long biggestPrimeFactorOf(long num) {
         return primeFactorsOf(num).max()
     }
 }
