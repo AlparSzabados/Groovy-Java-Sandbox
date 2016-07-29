@@ -19,8 +19,8 @@ class Euler_5 {
      */
     @Test
     public void shouldSolveProblem5() {
-        assert (smallestPositiveNumberEvenlyDivisibleByAllNumbersFrom1To(10)) == 2_520L
-        assert (smallestPositiveNumberEvenlyDivisibleByAllNumbersFrom1To(20)) == 232_792_560L
+        assert smallestPositiveNumberEvenlyDivisibleByAllNumbersFrom1To(10) == 2_520L
+        assert smallestPositiveNumberEvenlyDivisibleByAllNumbersFrom1To(20) == 232_792_560L
     }
 
     private static long smallestPositiveNumberEvenlyDivisibleByAllNumbersFrom1To(int max) {

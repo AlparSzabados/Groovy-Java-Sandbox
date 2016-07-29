@@ -28,8 +28,8 @@ class Euler_6 {
      */
     @Test
     public void shouldSolveProblem6() {
-        assert (differenceBetweenSumOfTheSquaresAndSquareOfTheSumFrom1UpTo(10)) == 2640L
-        assert (differenceBetweenSumOfTheSquaresAndSquareOfTheSumFrom1UpTo(100)) == 25164150L
+        assert differenceBetweenSumOfTheSquaresAndSquareOfTheSumFrom1UpTo(10) == 2640L
+        assert differenceBetweenSumOfTheSquaresAndSquareOfTheSumFrom1UpTo(100) == 25164150L
     }
 
     private static long differenceBetweenSumOfTheSquaresAndSquareOfTheSumFrom1UpTo(int max) {
@@ -37,10 +37,10 @@ class Euler_6 {
     }
 
     static long sumOfSquaresFrom1UpTo(int max) {
-        return ((1..max).inject { result, n -> result + n**2 })
+        return (1..max).inject { result, n -> result + n**2 }
     }
 
     static long squareOfSumFrom1UpTo(int max) {
-        return ((1..max).collect().sum()**2)
+        return (1..max).collect().sum()**2
     }
 }

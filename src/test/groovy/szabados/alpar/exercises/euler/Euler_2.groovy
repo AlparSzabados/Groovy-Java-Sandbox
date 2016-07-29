@@ -20,8 +20,8 @@ class Euler_2 {
      */
     @Test
     public void shouldSolveProblem2() {
-        assert (sumOfEvenFibonacciValuesNotExceeding(90)) == 44
-        assert (sumOfEvenFibonacciValuesNotExceeding(4_000_000)) == 4_613_732
+        assert sumOfEvenFibonacciValuesNotExceeding(90) == 44
+        assert sumOfEvenFibonacciValuesNotExceeding(4_000_000) == 4_613_732
     }
 
     private static int sumOfEvenFibonacciValuesNotExceeding(int limit) {

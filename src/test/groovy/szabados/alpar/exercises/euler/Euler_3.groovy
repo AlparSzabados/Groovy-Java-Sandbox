@@ -17,9 +17,9 @@ class Euler_3 {
      */
     @Test
     public void shouldSolveProblem3() {
-        assert (biggestPrimeFactorOf(23)) == 23
-        assert (biggestPrimeFactorOf(24)) == 3
-        assert (biggestPrimeFactorOf(600_851_475_143)) == 6857
+        assert biggestPrimeFactorOf(23) == 23
+        assert biggestPrimeFactorOf(24) == 3
+        assert biggestPrimeFactorOf(600_851_475_143) == 6857
     }
 
     private static long biggestPrimeFactorOf(long num) {
