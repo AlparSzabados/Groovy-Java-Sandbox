@@ -23,6 +23,6 @@ class Euler_3 {
     }
 
     private static long biggestPrimeFactorOf(long num) {
-        return primeFactorsOf(num).max()
+        primeFactorsOf(num).max()
     }
 }
