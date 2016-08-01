@@ -19,7 +19,7 @@ class Euler_4 {
     @Test
     public void shouldSolveProblem4() {
         assert largestPalindromeOfProductsFromFactorsInRange(10, 99) == 9009
-        assert largestPalindromeOfProductsFromFactorsInRange(100, 999) == 906609
+        assert largestPalindromeOfProductsFromFactorsInRange(100, 999) == 906_609
     }
 
     static final int largestPalindromeOfProductsFromFactorsInRange(int min, int max) {
