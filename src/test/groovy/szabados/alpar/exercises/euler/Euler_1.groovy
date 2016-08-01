@@ -17,15 +17,15 @@ class Euler_1 {
     @Test
 
     public void shouldSolveProblem1() {
-        assert sumOf3and5bellow(10) == (23)
-        assert sumOf3and5bellow(1000) == (233168)
+        assert sumOf3and5bellow(10) == 23
+        assert sumOf3and5bellow(1000) == 233_168
     }
 
     private static int sumOf3and5bellow(int limit) {
-        return (1..<limit).findAll { filter it }.sum() as int
+        (1..<limit).findAll { filter it }.sum() as int
     }
 
     private static boolean filter(int num) {
-        return num % 3 == 0 || num % 5 == 0
+        num % 3 == 0 || num % 5 == 0
     }
 }
