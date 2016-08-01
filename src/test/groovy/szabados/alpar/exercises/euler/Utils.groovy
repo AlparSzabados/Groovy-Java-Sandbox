@@ -37,9 +37,10 @@ class Utils {
         }
         numReverse
     }
+
     static boolean isPrime(long n) {
         if (n == 2L) return true
-        if (n % 2 == 0L && n != 2L) return false
+        else if (n % 2 == 0L) return false
         for (long i = 3; i <= Math.sqrt(n) + 1; i += 2) {
             if (n % i == 0L) return false;
         }
