@@ -13,8 +13,8 @@ class Euler_8 {
     private static long greatestProductOfAdjacentNumbers(int sizeOfConsecutive, String num) {
         List<Integer> number = digits(num)
         long largest_product = (0..<(number.size() - sizeOfConsecutive))
-                        .collect { i -> number[i..<(i + sizeOfConsecutive)].inject(1) { x, y -> x * (y as long) } }
-                        .max() as long
+                .collect { i -> number[i..<(i + sizeOfConsecutive)].inject(1) { x, y -> x * (y as long) } }
+                .max() as long
 
         return largest_product
     }
