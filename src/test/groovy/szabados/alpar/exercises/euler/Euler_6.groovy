@@ -41,6 +41,10 @@ class Euler_6 {
     }
 
     static long squareOfSumFrom1UpTo(int max) {
-        ((max * (max + 1)) / 2)**2
+        sumOf1UpTo(max)**2
+    }
+
+    private static sumOf1UpTo(int max) {
+        (max * (max + 1)) / 2
     }
 }

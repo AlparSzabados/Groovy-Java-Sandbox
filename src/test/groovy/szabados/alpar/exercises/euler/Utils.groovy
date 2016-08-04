@@ -39,8 +39,7 @@ class Utils {
     }
 
     static boolean isPrime(long n) {
-        if (n == 2L) return true
-        else if (n % 2 == 0L) return false
+        if (n % 2 == 0L) return (n == 2L)
         for (long i = 3; i <= Math.sqrt(n) + 1; i += 2) {
             if (n % i == 0L) return false;
         }

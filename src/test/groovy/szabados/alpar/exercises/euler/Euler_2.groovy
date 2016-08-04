@@ -25,7 +25,7 @@ class Euler_2 {
     }
 
     private static int sumOfEvenFibonacciValuesNotExceeding(int limit) {
-        fibonacci(limit).findAll { int n -> filter n }.sum() as int
+        fibonacci(limit).findAll { filter it }.sum() as int
     }
 
     private static boolean filter(int num) {

@@ -3,6 +3,7 @@ package szabados.alpar.exercises.euler
 import org.junit.Test
 
 class Euler_8 {
+
     /**
      * <strong>Problem 8: Largest product in a series</strong>
      * <p>
@@ -36,7 +37,6 @@ class Euler_8 {
      * <p>
      * See also <a href="https://projecteuler.net/problem=8">projecteuler.net problem 8</a>.
      */
-
     @Test
     public void shouldResolveProblem8() {
         assert greatestProductOfAdjacentNumbers(4, _1000_DIGIT_NUMBER) == 5_832
@@ -45,11 +45,11 @@ class Euler_8 {
 
     private static long greatestProductOfAdjacentNumbers(int sizeOfConsecutive, String num) {
         List<Integer> number = digits(num)
-        long largest_product = (0..<(number.size() - sizeOfConsecutive))
+        long largestProduct = (0..<(number.size() - sizeOfConsecutive))
                 .collect { i -> number[i..<(i + sizeOfConsecutive)].inject(1) { x, y -> x * (y as long) } }
                 .max() as long
 
-        return largest_product
+        largestProduct
     }
 
     private static List<Integer> digits(String num) {
