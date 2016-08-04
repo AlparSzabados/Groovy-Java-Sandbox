@@ -45,4 +45,8 @@ class Utils {
         }
         return true;
     }
+
+    static isDivisible(int dividend, int divisor) {
+        dividend % divisor == 0
+    }
 }

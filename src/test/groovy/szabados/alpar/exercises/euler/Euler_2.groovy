@@ -2,6 +2,7 @@ package szabados.alpar.exercises.euler
 
 import org.junit.Test
 
+import static szabados.alpar.exercises.euler.Utils.*
 import static szabados.alpar.exercises.euler.Utils.fibonacci
 
 class Euler_2 {
@@ -29,6 +30,6 @@ class Euler_2 {
     }
 
     private static boolean filter(int num) {
-        num % 2 == 0
+        isDivisible(num, 2)
     }
 }

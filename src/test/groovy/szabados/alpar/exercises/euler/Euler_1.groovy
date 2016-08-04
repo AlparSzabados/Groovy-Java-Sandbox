@@ -2,6 +2,8 @@ package szabados.alpar.exercises.euler
 
 import org.junit.Test
 
+import static szabados.alpar.exercises.euler.Utils.isDivisible
+
 class Euler_1 {
 
     /**
@@ -26,6 +28,6 @@ class Euler_1 {
     }
 
     private static boolean filter(int num) {
-        num % 3 == 0 || num % 5 == 0
+        isDivisible(num, 3) || isDivisible(num, 5)
     }
 }
