@@ -13,6 +13,7 @@ class TwoMaxTest extends Specification {
                [1, 1]              || [1, 1]
                [1, 3, 2, 3]        || [3, 3]
                [1, 3, 2, 3, 10, 9] || [10, 9]
+               [9, 3, 2, 3, 1, 10] || [10, 9]
         /*@formatter:on*/
     }
 }
