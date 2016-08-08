@@ -2,16 +2,16 @@ package szabados.alpar.exercises
 
 class TwoMax {
     static List<Integer> findTwoMax(List<Integer> list) {
-        List<Integer> max1 = []
+        List<Integer> twoMax = []
 
         for (int n : list) {
-            if (n > max1[0]) {
-                max1[1] = max1[0]
-                max1[0] = n
-            } else if (n <= max1[0]) {
-                max1[1] = n
+            if (n > twoMax[0]) {
+                twoMax[1] = twoMax[0]
+                twoMax[0] = n
+            } else if (n <= twoMax[0]) {
+                twoMax[1] = n
             }
         }
-        return max1.findAll{ it != null }
+        return twoMax.findAll{ it != null }
     }
 }
