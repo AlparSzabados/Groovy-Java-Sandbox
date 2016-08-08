@@ -11,6 +11,6 @@ class TwoMax {
             } else if (n <= twoMax[1] && n > twoMax[0])
                 twoMax[0] = n
         }
-        return twoMax.findAll { it != null }
+        twoMax.findAll()
     }
 }
