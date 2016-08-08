@@ -5,13 +5,12 @@ class TwoMax {
         List<Integer> twoMax = []
 
         for (int n : list) {
-            if (n > twoMax[0]) {
-                twoMax[1] = twoMax[0]
-                twoMax[0] = n
-            } else if (n <= twoMax[0] && n > twoMax[1]) {
+            if (n > twoMax[1]) {
+                twoMax[0] = twoMax[1]
                 twoMax[1] = n
-            }
+            } else if (n <= twoMax[1] && n > twoMax[0])
+                twoMax[0] = n
         }
-        return twoMax.findAll{ it != null }
+        return twoMax.findAll { it != null }
     }
 }
