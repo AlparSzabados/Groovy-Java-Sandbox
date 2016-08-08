@@ -8,12 +8,13 @@ class TwoMaxTest extends Specification {
         when: def result = TwoMax.findTwoMax(list)
         then: result == twoMax
 
-        where: list                || twoMax
-               [1]                 || [1]
-               [1, 1]              || [1, 1]
-               [1, 3, 2, 3]        || [3, 3]
-               [1, 3, 2, 3, 10, 9] || [10, 9]
-               [9, 3, 2, 3, 1, 10] || [10, 9]
+        where: list                           || twoMax
+               [1]                            || [1]
+               [1, 1]                         || [1, 1]
+               [1, 3, 2, 3]                   || [3, 3]
+               [1, 3, 2, 3, 10, 9]            || [10, 9]
+               [9, 3, 2, 3, 1, 10]            || [10, 9]
+               [3, 1, 4, 1, 5, 9, 2, 6, 5, 3] || [9, 6]
         /*@formatter:on*/
     }
 }

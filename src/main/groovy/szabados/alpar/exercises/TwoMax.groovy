@@ -8,7 +8,7 @@ class TwoMax {
             if (n > twoMax[0]) {
                 twoMax[1] = twoMax[0]
                 twoMax[0] = n
-            } else if (n <= twoMax[0]) {
+            } else if (n <= twoMax[0] && n > twoMax[1]) {
                 twoMax[1] = n
             }
         }
