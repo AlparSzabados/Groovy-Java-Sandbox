@@ -1,57 +1,39 @@
 package szabados.alpar.exercises.euler
 
-import static szabados.alpar.exercises.euler.Utils.createMatrix
-
 class Euler_11 {
-    static greatestProductOfAdjacentNumbersInAGrid(String st, int sizeOfConsecutive) {
-        def matrix = createMatrix(st)
-        def maxHorizontal = horizontal(matrix, sizeOfConsecutive)
-        def maxVertical = vertical(matrix, sizeOfConsecutive)
-        def maxDiagonalUp = diagonalUp(matrix, sizeOfConsecutive)
-        def maxDiagonalDown = diagonalDown(matrix, sizeOfConsecutive)
+    static greatestProductOfAdjacentNumbersInAGrid(List grid, int sizeOfConsecutive) {
+        def maxHorizontal = horizontal(grid, sizeOfConsecutive)
+        def maxDiagonalUp = diagonalUp(grid, sizeOfConsecutive)
+        def maxDiagonalDown = diagonalDown(grid, sizeOfConsecutive)
 
-        [maxHorizontal, maxVertical, maxDiagonalUp, maxDiagonalDown].max()
+        [maxHorizontal, maxDiagonalUp, maxDiagonalDown].max()
     }
 
-    static horizontal(List<String> matrix, int sizeOfConsecutive) {
-        def maxHorizontal = 0
-        for (int k in 0..<matrix.size()) {
-            for (int i in 0..<matrix.size() - sizeOfConsecutive + 1) {
-                def result = 1
+    static horizontal(List<List<Integer>> grid, int sizeOfConsecutive) {
+        def maxHorizontalAndVertical = 0
+        for (k in 0..<grid.size()) {
+            for (i in 0..(grid.size() - sizeOfConsecutive)) {
+                def horizontal = 1
+                def vertical = 1
                 for (int j = i; j < (i + sizeOfConsecutive); j++) {
-                    result *= matrix[k][j].toInteger()
+                    horizontal *= grid[k][j]
+                    vertical *= grid[j][k]
                 }
-                if (result > maxHorizontal)
-                    maxHorizontal = result
+                maxHorizontalAndVertical = (horizontal > vertical) ? horizontal : vertical
             }
         }
-        maxHorizontal
+        maxHorizontalAndVertical
     }
 
-    static vertical(List<String> matrix, int sizeOfConsecutive) {
-        def maxVertical = 0
-        for (int k in 0..<matrix.size()) {
-            for (int i in 0..<matrix.size() - sizeOfConsecutive + 1) {
-                def result = 1
-                for (int j = i; j < i + sizeOfConsecutive; j++) {
-                    result *= matrix[j][k].toInteger()
-                }
-                if (result > maxVertical) {
-                    maxVertical = result
-                }
-            }
-        }
-        maxVertical
-    }
 
-    static diagonalUp(List<String> matrix, int sizeOfConsecutive) {
+    static diagonalUp(List<List<Integer>> matrix, int sizeOfConsecutive) {
         def maxDiagonalUp = 0
-        for (int k in 0..matrix.size() - sizeOfConsecutive) {
-            for (int i in 0..matrix.size() - sizeOfConsecutive) {
+        for (int k in 0..(matrix.size() - sizeOfConsecutive)) {
+            for (int i in 0..(matrix.size() - sizeOfConsecutive)) {
                 def result = 1
                 def x = 0
                 for (int j = k; j < k + sizeOfConsecutive; j++) {
-                    result *= matrix[j][i + x].toInteger()
+                    result *= matrix[j][i + x]
                     x++
                 }
                 if (result > maxDiagonalUp) {
@@ -62,14 +44,14 @@ class Euler_11 {
         maxDiagonalUp
     }
 
-    static diagonalDown(List<String> matrix, int sizeOfConsecutive) {
+    static diagonalDown(List<List<Integer>> matrix, int sizeOfConsecutive) {
         def maxDiagonalDown = 0
         for (int k in 0..matrix.size() - sizeOfConsecutive) {
             for (int i in 3..<matrix.size()) {
                 def result = 1
                 def x = 0
                 for (int j = k; j < k + sizeOfConsecutive; j++) {
-                    result *= matrix[j][i + x].toInteger()
+                    result *= matrix[j][i + x]
                     x--
                 }
                 if (result > maxDiagonalDown) {
@@ -80,4 +62,3 @@ class Euler_11 {
         maxDiagonalDown
     }
 }
-
