@@ -47,7 +47,7 @@ class Euler_11 {
     static diagonalLeft(List<List<Integer>> matrix, int sizeOfConsecutive) {
         def maxDiagonalDown = 0
         for (int k in 0..matrix.size() - sizeOfConsecutive) {
-            for (int i in 3..<matrix.size()) {
+            for (int i in (sizeOfConsecutive - 1)..<matrix.size()) {
                 def result = 1
                 def x = 0
                 for (int j = k; j < k + sizeOfConsecutive; j++) {
