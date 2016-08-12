@@ -2,14 +2,14 @@ package szabados.alpar.exercises.euler
 
 class Euler_11 {
     static greatestProductOfAdjacentNumbersInAGrid(List grid, int sizeOfConsecutive) {
-        def maxHorizontal = horizontal(grid, sizeOfConsecutive)
-        def maxDiagonalUp = diagonalUp(grid, sizeOfConsecutive)
-        def maxDiagonalDown = diagonalDown(grid, sizeOfConsecutive)
+        def maxHorizontal = rightAndDown(grid, sizeOfConsecutive)
+        def maxDiagonalUp = diagonalRight(grid, sizeOfConsecutive)
+        def maxDiagonalDown = diagonalLeft(grid, sizeOfConsecutive)
 
         [maxHorizontal, maxDiagonalUp, maxDiagonalDown].max()
     }
 
-    static horizontal(List<List<Integer>> grid, int sizeOfConsecutive) {
+    static rightAndDown(List<List<Integer>> grid, int sizeOfConsecutive) {
         def maxHorizontalAndVertical = 0
         for (k in 0..<grid.size()) {
             for (i in 0..(grid.size() - sizeOfConsecutive)) {
@@ -26,7 +26,7 @@ class Euler_11 {
     }
 
 
-    static diagonalUp(List<List<Integer>> matrix, int sizeOfConsecutive) {
+    static diagonalRight(List<List<Integer>> matrix, int sizeOfConsecutive) {
         def maxDiagonalUp = 0
         for (int k in 0..(matrix.size() - sizeOfConsecutive)) {
             for (int i in 0..(matrix.size() - sizeOfConsecutive)) {
@@ -44,7 +44,7 @@ class Euler_11 {
         maxDiagonalUp
     }
 
-    static diagonalDown(List<List<Integer>> matrix, int sizeOfConsecutive) {
+    static diagonalLeft(List<List<Integer>> matrix, int sizeOfConsecutive) {
         def maxDiagonalDown = 0
         for (int k in 0..matrix.size() - sizeOfConsecutive) {
             for (int i in 3..<matrix.size()) {
