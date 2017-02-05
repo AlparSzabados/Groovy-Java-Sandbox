@@ -5,7 +5,7 @@ import org.junit.Test
 import static szabados.alpar.exercises.euler.Utils.*
 import static szabados.alpar.exercises.euler.Utils.fibonacci
 
-class Euler_2 {
+class Euler_02 {
 
     /**
      * <strong>Problem 2: Even Fibonacci numbers</strong>

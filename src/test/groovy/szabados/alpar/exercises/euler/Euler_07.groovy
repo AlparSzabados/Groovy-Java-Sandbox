@@ -4,7 +4,7 @@ import org.junit.Test
 
 import static szabados.alpar.exercises.euler.Utils.isPrime
 
-class Euler_7 {
+class Euler_07 {
 
     /**
      * <strong>Problem 7: 10001st prime</strong>

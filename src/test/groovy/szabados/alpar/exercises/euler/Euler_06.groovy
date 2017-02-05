@@ -2,7 +2,7 @@ package szabados.alpar.exercises.euler
 
 import org.junit.Test
 
-class Euler_6 {
+class Euler_06 {
 
     /**
      * <strong>Problem 6: Sum square difference</strong>

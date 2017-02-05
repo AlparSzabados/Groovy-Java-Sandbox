@@ -2,7 +2,7 @@ package szabados.alpar.exercises.euler
 
 import org.junit.Test
 
-class Euler_8 {
+class Euler_08 {
 
     /**
      * <strong>Problem 8: Largest product in a series</strong>

@@ -4,7 +4,7 @@ import org.junit.Test
 
 import static szabados.alpar.exercises.euler.Utils.numberInReverse
 
-class Euler_4 {
+class Euler_04 {
 
     /**
      * <strong>Problem 4: Largest palindrome product</strong>

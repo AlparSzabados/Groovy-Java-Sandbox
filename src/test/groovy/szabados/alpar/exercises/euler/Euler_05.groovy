@@ -4,7 +4,7 @@ import org.junit.Test
 
 import static szabados.alpar.exercises.euler.Utils.primeFactorsOf
 
-class Euler_5 {
+class Euler_05 {
 
     /**
      * <strong>Problem 5: Smallest multiple</strong>

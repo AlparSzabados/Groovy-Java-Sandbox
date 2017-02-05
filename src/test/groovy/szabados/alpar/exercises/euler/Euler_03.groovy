@@ -4,7 +4,7 @@ import org.junit.Test
 
 import static szabados.alpar.exercises.euler.Utils.primeFactorsOf
 
-class Euler_3 {
+class Euler_03 {
 
     /**
      * <strong>Problem 3: Largest prime factor</strong>

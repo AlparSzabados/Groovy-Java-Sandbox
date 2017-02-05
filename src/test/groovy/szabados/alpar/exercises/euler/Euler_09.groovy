@@ -2,7 +2,7 @@ package szabados.alpar.exercises.euler
 
 import org.junit.Test
 
-class Euler_9 {
+class Euler_09 {
 
     /**
      * <strong>Problem 9: Special Pythagorean triplet</strong>

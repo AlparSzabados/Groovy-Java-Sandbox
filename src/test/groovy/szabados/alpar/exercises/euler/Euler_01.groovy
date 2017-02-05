@@ -4,7 +4,7 @@ import org.junit.Test
 
 import static szabados.alpar.exercises.euler.Utils.isDivisible
 
-class Euler_1 {
+class Euler_01 {
 
     /**
      * <strong>Problem 1: Multiples of 3 and 5</strong>
