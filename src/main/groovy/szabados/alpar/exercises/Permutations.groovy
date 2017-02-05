@@ -2,7 +2,7 @@ package szabados.alpar.exercises
 
 // TODO write test
 
-/* All permutations of a small string in a big string */
+/* All Permutations of a small string in a big string */
 
 def text = 'abcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefghijk'
 def word = 'abcdefghijk'
