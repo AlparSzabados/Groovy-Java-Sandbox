@@ -11,14 +11,6 @@ import java.util.*;
  */
 
 public class MergeIntervals {
-    public static void main(String[] args) {
-        List<Interval> intervals = Arrays.asList(new Interval(1, 4), new Interval(5, 6), new Interval(5, 6), new Interval(0, 10));
-        final List<Interval> merge = MergeIntervals.merge(intervals);
-        for (Interval interval : merge) {
-//            System.out.println(interval.start);
-//            System.out.println(interval.end);
-        }
-    }
 
     static public List<Interval> merge(List<Interval> intervals) {
         LinkedList<Interval> result = new LinkedList<>();
