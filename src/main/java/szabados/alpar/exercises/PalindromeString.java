@@ -2,7 +2,9 @@ package szabados.alpar.exercises;
 
 import java.util.Scanner;
 
-/* Write a program which takes input as string and check if it is palindrome or not. */
+/**
+ * Write a program which takes input as string and check if it is palindrome or not.
+ */
 
 public class PalindromeString {
     public static void main(String[] args) throws Exception {

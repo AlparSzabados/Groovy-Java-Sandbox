@@ -5,7 +5,10 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/* Given a list of 24-hour clock time points in "Hour:Minutes" format, find the minimum minutes difference between any two time points in the list.*/
+/**
+ * Given a list of 24-hour clock time points in "Hour:Minutes" format,
+ * find the minimum minutes difference between any two time points in the list.
+ */
 
 public class MinimumTimeDifference {
     public static int findMinDifference(List<String> timePoints) {

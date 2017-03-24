@@ -1,6 +1,8 @@
 package szabados.alpar.exercises;
 
-/* Write a program which takes input as a number and converts it into string format. */
+/**
+ * Write a program which takes input as a number and converts it into string format.
+ */
 
 public class NumToString {
 
