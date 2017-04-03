@@ -13,6 +13,6 @@ public class Primes {
                 isComposite.set(j);
             }
         }
-        return n - 2 - isComposite.cardinality();
+        return Math.max(0, n - (isComposite.cardinality() + 2));
     }
 }
