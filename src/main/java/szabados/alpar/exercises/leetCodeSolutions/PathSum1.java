@@ -1,4 +1,4 @@
-package szabados.alpar.exercises;
+package szabados.alpar.exercises.leetCodeSolutions;
 
 /**
  * Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all
@@ -18,7 +18,7 @@ package szabados.alpar.exercises;
  */
 
 public class PathSum1 {
-    private boolean hasPathSum(TreeNode root, int sum) {
+    public boolean hasPathSum(TreeNode root, int sum) {
         if (root != null) {
             if (root.right == root.left && sum - root.val == 0) {
                 return true;

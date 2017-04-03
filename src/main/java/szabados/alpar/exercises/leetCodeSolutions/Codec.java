@@ -1,4 +1,4 @@
-package szabados.alpar.exercises;
+package szabados.alpar.exercises.leetCodeSolutions;
 
 import java.util.HashMap;
 import java.util.Map;
