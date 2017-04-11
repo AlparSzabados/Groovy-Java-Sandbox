@@ -18,7 +18,7 @@ import java.util.Set;
  * 62 + 82 = 100
  * 12 + 02 + 02 = 1
  */
-public class HappyNumber {
+public class _202_HappyNumber {
     public boolean isHappy(int n) {
         for (Set<Integer> visited = new HashSet<>(); visited.add(n); ) {
             int sum = 0;

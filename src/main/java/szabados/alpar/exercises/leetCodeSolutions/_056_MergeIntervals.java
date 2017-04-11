@@ -11,7 +11,7 @@ import java.util.*;
  * return [1,6],[8,10],[15,18].
  */
 
-public class MergeIntervals {
+public class _056_MergeIntervals {
 
     static public List<Interval> merge(List<Interval> intervals) {
         LinkedList<Interval> result = new LinkedList<>();

@@ -9,7 +9,7 @@ import java.util.List;
  * For numbers which are multiples of both three and five output “FizzBuzz”.
  */
 
-public class FizzBuzz {
+public class _412_FizzBuzz {
     static public List<String> fizzBuzz(int n) {
         List<String> result = new ArrayList<>();
         if (n <= 1) {

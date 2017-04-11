@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  * Return a string representing their multiplication.
  * Note i2 = -1 according to the definition.
  */
-public class ComplexNumberMultiplication {
+public class _537_ComplexNumberMultiplication {
     public String complexNumberMultiply(String a, String b) {
         int[] pair1 = parseNumber(a);
         int[] pair2 = parseNumber(b);

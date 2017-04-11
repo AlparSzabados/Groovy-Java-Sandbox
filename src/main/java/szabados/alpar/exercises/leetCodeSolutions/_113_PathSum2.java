@@ -20,7 +20,7 @@ import java.util.List;
  * return [[5,4,11,2], [5,8,4,5]]
  */
 
-public class PathSum2 {
+public class _113_PathSum2 {
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<List<Integer>> results = new ArrayList<>();
         traverse(root, sum, new ArrayList<>(), results);

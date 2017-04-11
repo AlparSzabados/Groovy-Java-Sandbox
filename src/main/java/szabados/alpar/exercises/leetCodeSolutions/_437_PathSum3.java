@@ -23,7 +23,7 @@ package szabados.alpar.exercises.leetCodeSolutions;
  * 3. -3 -> 11
  */
 
-public class PathSum3 {
+public class _437_PathSum3 {
     private int pathSum(TreeNode root, int sum) {
         int count = 0;
         if (root != null) {

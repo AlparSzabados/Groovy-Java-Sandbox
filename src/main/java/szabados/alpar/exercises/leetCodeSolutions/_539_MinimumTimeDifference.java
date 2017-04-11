@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * find the minimum minutes difference between any two time points in the list.
  */
 
-public class MinimumTimeDifference {
+public class _539_MinimumTimeDifference {
     public static int findMinDifference(List<String> timePoints) {
         List<LocalTime> times = timePoints.stream().map(LocalTime::parse).sorted().collect(Collectors.toList());
 

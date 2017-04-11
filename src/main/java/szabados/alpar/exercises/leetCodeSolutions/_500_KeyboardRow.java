@@ -8,7 +8,7 @@ import java.util.List;
  * of alphabet on only one row's of American keyboard.
  */
 
-public class KeyboardRow {
+public class _500_KeyboardRow {
     private static String[] keyboardLine = {"qwertyuiop", "asdfghjkl", "zxcvbnm"};
 
     public String[] findWords(String[] words) {

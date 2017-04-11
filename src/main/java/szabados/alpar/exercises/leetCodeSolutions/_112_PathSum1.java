@@ -17,7 +17,7 @@ package szabados.alpar.exercises.leetCodeSolutions;
  * return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
  */
 
-public class PathSum1 {
+public class _112_PathSum1 {
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root != null) {
             if (root.right == root.left && sum - root.val == 0) {

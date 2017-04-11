@@ -17,10 +17,10 @@ import java.util.stream.IntStream;
  * pick(1) should return 0. Since in the array only nums[0] is equal to 1.
 */
 
-public class RandomPickIndex {
+public class _398_RandomPickIndex {
     private int[] nums;
 
-    public RandomPickIndex(int[] nums) {
+    public _398_RandomPickIndex(int[] nums) {
         this.nums = nums;
     }
 

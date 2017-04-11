@@ -8,7 +8,7 @@ import java.util.Map;
  * Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work.
  * You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.
  */
-public class Codec {
+public class _535_EncodeAndDecodeTinyURL {
     private Map<String, String> decoded = new HashMap<>();
 
     public String encode(String longUrl) {
