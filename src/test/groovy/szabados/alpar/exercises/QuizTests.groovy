@@ -3,7 +3,7 @@ package szabados.alpar.exercises
 import spock.lang.Specification
 
 class QuizTests extends Specification {
-    def 'dollars and cents'() {
+    def 'convert to currency'() {
         when:   def dollars = ConvertToCurrency.convertToDollars(values)
         then:   dollars == result
 
@@ -13,7 +13,7 @@ class QuizTests extends Specification {
                 "3.99"       || "\$3.99"
     }
 
-    def 'timed reading'() {
+    def 'words read'() {
         when:   def wordsRead = WordsRead.wordsRead(maxLength, string)
         then:   wordsRead == result
 
@@ -21,8 +21,8 @@ class QuizTests extends Specification {
                 4         | "The Fox asked the stork, 'How is the soup?'"  || 7
     }
 
-    def 'volleyball positions'() {
-        when:   def initialFormation = VolleyballRotation.getInitialPosition(formation as String[][], k)
+    def 'volleyball player rotation'() {
+        when:   def initialFormation = VolleyballPlayerRotation.getInitialPosition(formation as String[][], k)
         then:   initialFormation == result
 
         where:  formation                                                                                                               | k   || result
@@ -30,7 +30,7 @@ class QuizTests extends Specification {
                 [["empty","Alice","empty"],["Bob","empty","Charlie"],["empty","Dave","empty"],["Eve","empty","Frank"]]                  | 6   || [["empty","Alice","empty"],["Bob","empty","Charlie"],["empty","Dave","empty"],["Eve","empty","Frank"]]
     }
 
-    def 'unique ordering'() {
+    def 'order unique'() {
         when:   def uniqueOrdering = OrderUnique.uniqueOrder(string)
         then:   uniqueOrdering == result
 
