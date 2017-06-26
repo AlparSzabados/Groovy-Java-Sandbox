@@ -9,7 +9,7 @@ class ParsePersonTest extends Specification {
 
         where:  text                                                                                           || result
                 "John.Davison/05051988/Belgrade Michael.Barton/01011968/Krakov Ivan.Perkinson/23051986/Moscow" || ["John Davison 05 May 1988 Belgrade", "Michael Barton 01 Jan 1968 Krakov", "Ivan Perkinson 23 May 1986 Moscow"]
-
-
+                "" || []
+                "John.Davison/05051988/Belgrade" || ["John Davison 05 May 1988 Belgrade"]
     }
 }

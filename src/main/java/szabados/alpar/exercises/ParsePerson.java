@@ -3,46 +3,36 @@ package szabados.alpar.exercises;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static szabados.alpar.exercises.ParsePerson.outputFormat;
 
 public class ParsePerson {
-    public static List<Person> parsePerson(String text) throws Exception {
-        if (text.isEmpty()) return null;
-        List<Person> people = new ArrayList<>();
-        String[] split = text.split("\\s");
+    public static final DateTimeFormatter inputFormat = DateTimeFormatter.ofPattern("ddMMyyyy");
+    public static final DateTimeFormatter outputFormat = DateTimeFormatter.ofPattern("dd MMM yyyy");
 
-        for (String s : split) {
-            String[] person = s.split("\\W");
-            if (person.length != 4) throw new Exception("Wrong format");
-            people.add(parse(person));
-        }
-        return people;
+    public static List<Person> parsePerson(String text) {
+        if (text.isEmpty()) return new ArrayList<>();
+        String[] persons = text.split("\\s");
+        return parse(persons);
     }
 
-    private static Person parse(String[] person) {
-        String firstName = person[0];
-        String lastName = person[1];
-        LocalDate dateOfBirth = parseDate(person[2]);
-        String location = person[3];
-        return new Person(firstName, lastName, dateOfBirth, location);
+    private static List<Person> parse(String[] split) {
+        return Arrays.stream(split)
+                     .map(string -> string.split("\\W"))
+                     .map(s -> new Person(s[0], s[1], parseDate(s[2]), s[3]))
+                     .collect(Collectors.toList());
     }
 
-    private static LocalDate parseDate(String person) {
-        LocalDate dateOfBirth = null;
-        try {
-            String pattern = "ddMMyyyy";
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
-            dateOfBirth = LocalDate.parse(person, formatter);
-        } catch (Exception e) {
-            System.err.println("Can't parse Date " + e.getMessage());
-        }
-        return dateOfBirth;
+    private static LocalDate parseDate(String date) {
+        return LocalDate.parse(date, inputFormat);
     }
 }
 
 class Person {
-    private String firstName;
-    private String lastName;
+    private String firstName, lastName;
     private LocalDate dateOfBirth;
     private String location;
 
@@ -55,8 +45,6 @@ class Person {
 
     @Override
     public String toString() {
-        String pattern = "dd MMM yyyy";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
-        return firstName + " " + lastName + " " + dateOfBirth.format(formatter) + " " + location;
+        return String.join(" ", firstName, lastName, dateOfBirth.format(outputFormat), location);
     }
 }
