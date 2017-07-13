@@ -8,9 +8,9 @@ class QuizTests extends Specification {
         then:   dollars == result
 
         where:  values       || result
-                "3"          || "\$3.00"
-                "3.1"        || "\$3.10"
-                "3.99"       || "\$3.99"
+                '3'          || '$3.00'
+                '3.1'        || '$3.10'
+                '3.99'       || '$3.99'
     }
 
     def 'words read'() {
@@ -37,6 +37,6 @@ class QuizTests extends Specification {
         where:  string            || result
                 'AAAABBBCCDAABBB' || ['A', 'B', 'C', 'D', 'A', 'B']
                 'ABBCcAD'         || ['A', 'B', 'C', 'c', 'A', 'D']
-                '1,2,2,3,3'       || ['1', '2', '3']
+                '12233'           || ['1', '2', '3']
     }
 }

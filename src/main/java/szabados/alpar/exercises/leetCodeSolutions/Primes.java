@@ -8,7 +8,7 @@ import java.util.BitSet;
 public class Primes {
     public int countPrimes(int n) {
         BitSet isComposite = new BitSet(n);
-        for (int i = 2, length = (int) Math.sqrt(n); i < length; i++) {
+        for (int i = 2, length = (int) Math.sqrt(n); i <= length; i++) {
             for (int j = i * i; j < n; j += i) {
                 isComposite.set(j);
             }

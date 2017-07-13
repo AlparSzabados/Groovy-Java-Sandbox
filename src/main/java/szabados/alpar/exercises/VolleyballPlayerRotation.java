@@ -13,10 +13,8 @@ public class VolleyballPlayerRotation {
     private static List<String> getFormation(String[][] formation, int k) {
         List<List<String>> squash = squash(formation);
 
-        Deque<String> stack1 = new ArrayDeque<>();
-        Deque<String> stack2 = new ArrayDeque<>();
-        stack1.addAll(squash.get(0));
-        stack2.addAll(squash.get(1));
+        Deque<String> stack1 = new ArrayDeque<>(squash.get(0));
+        Deque<String> stack2 = new ArrayDeque<>(squash.get(1));
 
         for (int i = 0; i < k; i++) {
             stack1.addLast(stack2.pollLast());
@@ -24,10 +22,7 @@ public class VolleyballPlayerRotation {
         }
 
         stack1.addAll(stack2);
-        List<String> result = new ArrayList<>();
-        result.addAll(stack1);
-
-        return result;
+        return new ArrayList<>(stack1);
     }
 
     private static void rebuild(List<String> initialFormation, String[][] formation) {
@@ -45,7 +40,7 @@ public class VolleyballPlayerRotation {
         List<List<String>> result = new ArrayList<>();
         for (int i = 1; i < formation.length; i += 2) {
             formation[i][1] = formation[i - 1][1];
-            result.addAll(Arrays.asList(new ArrayList<>(Arrays.asList(formation[i]))));
+            result.add(new ArrayList<>(Arrays.asList(formation[i])));
         }
         return result;
     }

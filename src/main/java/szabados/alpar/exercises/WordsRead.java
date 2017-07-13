@@ -1,17 +1,11 @@
 package szabados.alpar.exercises;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Arrays;
 
 public class WordsRead {
-    public static int wordsRead(int maxLength, String s) {
-        Matcher matcher = Pattern.compile("[a-zA-Z]+").matcher(s);
-
-        int count = 0;
-        while (matcher.find()) {
-            if (matcher.group().length() <= maxLength) count++;
-        }
-
-        return count;
+    public static long wordsRead(long maxLength, String s) {
+        return Arrays.stream(s.split("\\W+"))
+                     .filter(w -> w.length() <= maxLength)
+                     .count();
     }
 }

@@ -10,7 +10,7 @@ public class OrderUnique {
 
         char prev = s.charAt(0);
         for (char c : s.toCharArray()) {
-            if (c != prev && c != ',') {
+            if (c != prev) {
                 result.add(String.valueOf(c));
                 prev = c;
             }
